@@ -1,0 +1,3 @@
+const Fonts = {};
+
+export {Fonts};
