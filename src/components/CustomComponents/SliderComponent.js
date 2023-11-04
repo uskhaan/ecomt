@@ -2,13 +2,13 @@ import React from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import {WP} from '../../utilities';
 import {SliderCard} from '../../components';
-export const SliderComponent = ({mT}) => (
+export const SliderComponent = ({data, mT}) => (
   <View style={[styles.mainCon, {marginTop: mT}]}>
     <View style={styles.sliderCon}>
       <FlatList
-        data={[1, 2, 3, 4, 5]}
+        data={data}
         renderItem={({item, index}) => {
-          return <SliderCard />;
+          return <SliderCard data={item} />;
         }}
         showsHorizontalScrollIndicator={false}
         horizontal={true}

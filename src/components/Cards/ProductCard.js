@@ -10,16 +10,16 @@ import {
   WP,
 } from '../../utilities';
 import {TextComponent} from '../Text/TextComponent';
-export const ProductCard = ({}) => {
+export const ProductCard = ({data}) => {
   return (
     <TouchableOpacity style={styles.container}>
-      <Image source={appImages.fruitsImage} style={styles.imgStyle} />
+      <Image source={data?.img} style={styles.imgStyle} />
       <View style={styles.innerCon}>
         <TextComponent
           size={14}
           family={appFonts.montserratMedium}
           color={colors.grey3}
-          text={'Fish'}
+          text={data?.title}
           tA={'left'}
         />
         <View style={styles.lowerCon}>
@@ -32,7 +32,7 @@ export const ProductCard = ({}) => {
               size={14}
               family={appFonts.montserratMedium}
               color={colors.grey}
-              text={'Tradly'}
+              text={'Ecomt'}
               mL={5}
             />
           </View>
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     width: '100%',
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
-    resizeMode: 'cover',
+    resizeMode: 'contain',
   },
   innerCon: {
     padding: WP('3'),

@@ -53,7 +53,7 @@ const Signup = ({navigation}) => {
               <View style={styles.formikInner}>
                 <TextComponent
                   color={colors.white}
-                  text={'Welcome to tradly'}
+                  text={'Welcome to ecomt'}
                   family={appFonts.montserratMedium}
                   size={24}
                   tA={'center'}

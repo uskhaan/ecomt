@@ -41,7 +41,7 @@ export const AddressCard = ({noAddress, addLocation, mT, changeAddress}) => {
       {changeAddress && (
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <TextComponent
-            text={'Deliver to Tradly Team, 75119\nKualalumpur, Malaysia'}
+            text={'Deliver to Ecomt Team, 75119\nKualalumpur, Malaysia'}
             family={appFonts.montserratMedium}
             size={14}
             color={colors.grey}

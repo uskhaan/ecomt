@@ -3,14 +3,14 @@ import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {WP, appFonts, colors} from '../../utilities';
 import {TextComponent} from '../Text/TextComponent';
 import {ProductCard} from '../../components';
-export const ProductSliderComponent = ({mT}) => (
+export const ProductSliderComponent = ({mT, title, data}) => (
   <View style={[styles.mainCon, {marginTop: mT}]}>
     <View style={styles.topCon}>
       <TextComponent
         size={18}
         family={appFonts.montserratBold}
         color={colors.black}
-        text={'Popular Products'}
+        text={title}
       />
       <TouchableOpacity style={styles.button}>
         <TextComponent
@@ -24,9 +24,9 @@ export const ProductSliderComponent = ({mT}) => (
 
     <FlatList
       style={styles.flatList}
-      data={[1, 2, 3, 4, 5]}
+      data={data}
       renderItem={({item, index}) => {
-        return <ProductCard />;
+        return <ProductCard data={item} />;
       }}
       showsHorizontalScrollIndicator={false}
       horizontal={true}

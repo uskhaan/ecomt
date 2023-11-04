@@ -23,7 +23,7 @@ export const StoreCard = ({profileImg = false, onPressInvite}) => {
           size={14}
           family={appFonts.montserratMedium}
           color={colors.grey3}
-          text={'Tradly Store'}
+          text={'Ecomt Store'}
           mT={WP('2')}
           mB={WP('3')}
         />

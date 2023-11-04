@@ -25,7 +25,7 @@ import {MyStatusBar} from '../../../components/Bar/MyStatusBar';
 const Login = ({navigation}) => {
   // Login Handler
   const onSubmit = async values => {
-    // onLogin(values);
+    navigation?.replace('App');
   };
 
   return (
@@ -54,7 +54,7 @@ const Login = ({navigation}) => {
               <View style={styles.formikInner}>
                 <TextComponent
                   color={colors.white}
-                  text={'Welcome to tradly'}
+                  text={'Welcome to Ecomt'}
                   family={appFonts.montserratMedium}
                   size={24}
                   tA={'center'}

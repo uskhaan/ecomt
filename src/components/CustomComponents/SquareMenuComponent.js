@@ -2,26 +2,23 @@ import React from 'react';
 import {
   ImageBackground,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
 } from 'react-native';
+import {WP, appFonts, colors} from '../../utilities';
 import {TextComponent} from '../Text/TextComponent';
-import {WP, appFonts, appImages, colors} from '../../utilities';
 
-export const SquareMenuComponent = ({onPress}) => {
-  const data = [1, 2, 3, 4, 5, 6, 7, 8];
-
+export const SquareMenuComponent = ({data}) => {
   return (
     <View style={styles.mainCon}>
       <View style={styles.row}>
-        {data.map((item, index) => (
+        {data?.map((item, index) => (
           <TouchableOpacity
             key={index}
             style={styles.container}
-            onPress={onPress}>
+            onPress={item?.onPress}>
             <ImageBackground
-              source={appImages.fruitsImage}
+              source={item?.imgSrc}
               style={styles.backgroundImage}
               imageStyle={styles.image}>
               <View style={styles.overlay}>
@@ -29,7 +26,8 @@ export const SquareMenuComponent = ({onPress}) => {
                   size={11}
                   family={appFonts.montserratSemiBold}
                   color={colors.white}
-                  text={'Beverages'}
+                  text={item?.title}
+                  tA={'center'}
                 />
               </View>
             </ImageBackground>

@@ -60,7 +60,7 @@ export const CreditCard = () => {
               size={15}
               family={appFonts.montserratRegular}
               color={colors.white}
-              text={'Tradly Team'}
+              text={'Ecomt Team'}
               mT={2}
             />
           </View>

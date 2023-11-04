@@ -1,17 +1,20 @@
-import {FlatList, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {WP, commonstyles, spacing} from '../../../utilities';
+import {ScrollView, View} from 'react-native';
 import {
   HomeHeader,
-  ProductCard,
   ProductSliderComponent,
-  SliderCard,
   SliderComponent,
   SquareMenuComponent,
   StoreSliderComponent,
 } from '../../../components';
-import styles from './styles';
-import {AppHeader} from '../../../components/Headers/AppHeader';
+import {
+  WP,
+  commonstyles,
+  homeNewList,
+  homeSliderList,
+  homeSquareMenuList,
+  spacing,
+} from '../../../utilities';
 
 const Home = ({navigation}) => {
   return (
@@ -20,14 +23,14 @@ const Home = ({navigation}) => {
       <ScrollView
         contentContainerStyle={[spacing.pb10]}
         showsVerticalScrollIndicator={false}>
-        <SliderComponent />
-        <SquareMenuComponent
-          onPress={() => {
-            navigation.navigate('Category');
-          }}
+        <SliderComponent data={homeSliderList} />
+        <SquareMenuComponent data={homeSquareMenuList} />
+        <ProductSliderComponent
+          mT={WP('5')}
+          title={'New Products'}
+          data={homeNewList}
         />
-        <ProductSliderComponent mT={WP('5')} />
-        <ProductSliderComponent mT={WP('5')} />
+        <ProductSliderComponent mT={WP('5')} title={'Popular Products'} />
         <StoreSliderComponent mT={WP('5')} />
       </ScrollView>
     </View>

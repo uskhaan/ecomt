@@ -10,11 +10,11 @@ import {
 import {appFonts, appImages, colors, size, spacing, WP} from '../../utilities';
 import {TextComponent} from '../Text/TextComponent';
 
-export const SliderCard = ({onPress, title, text, imgSrc}) => {
+export const SliderCard = ({data}) => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={appImages.fruitsImage}
+        source={data?.imgSrc}
         style={styles.backgroundImage}
         imageStyle={styles.image}>
         <View style={styles.overlay}>
@@ -22,18 +22,21 @@ export const SliderCard = ({onPress, title, text, imgSrc}) => {
             size={14}
             family={appFonts.montserratSemiBold}
             color={colors.white}
-            text={'READY TO DELIVER TO YOUR HOME'}
+            text={data?.title}
             maxWidth={WP('50')}
           />
-          <TouchableOpacity style={styles.button}>
-            <TextComponent
-              size={12}
-              family={appFonts.montserratBold}
-              color={colors.white}
-              text={'START SHOPPING'}
-              maxWidth={WP('50')}
-            />
-          </TouchableOpacity>
+
+          {data?.text && (
+            <TouchableOpacity style={styles.button} onPress={data?.onPress}>
+              <TextComponent
+                size={12}
+                family={appFonts.montserratBold}
+                color={colors.white}
+                text={data?.text}
+                maxWidth={WP('50')}
+              />
+            </TouchableOpacity>
+          )}
         </View>
       </ImageBackground>
     </View>

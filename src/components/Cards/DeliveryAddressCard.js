@@ -17,7 +17,7 @@ export const DeliveryAddressCard = ({mT}) => {
       <TextComponent
         family={appFonts.montserratMedium}
         color={colors.grey8}
-        text={'Tradly team'}
+        text={'Ecomt team'}
         size={14}
         mL={WP('4')}
       />

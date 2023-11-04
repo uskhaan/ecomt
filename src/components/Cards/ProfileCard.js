@@ -20,7 +20,7 @@ export const ProfileCard = ({profileImg = false, onPressInvite}) => {
             size={14}
             family={appFonts.montserratBold}
             color={colors.white}
-            text={'Tradly Team'}
+            text={'Ecomt Team'}
           />
           <TextComponent
             size={12}
@@ -33,7 +33,7 @@ export const ProfileCard = ({profileImg = false, onPressInvite}) => {
             size={12}
             family={appFonts.montserratMedium}
             color={colors.white}
-            text={'info@tradly.co'}
+            text={'info@ecomt.co'}
             mT={5}
           />
         </View>

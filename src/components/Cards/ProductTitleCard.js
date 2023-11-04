@@ -18,7 +18,7 @@ export const ProductTitleCard = ({onPressFollow, mT}) => {
               size={14}
               family={appFonts.montserratMedium}
               color={colors.grey}
-              text={'Tradly'}
+              text={'Ecomt'}
               mL={5}
             />
           </View>
